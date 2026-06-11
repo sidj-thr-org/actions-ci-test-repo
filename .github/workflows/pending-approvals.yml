@@ -30,6 +30,9 @@ jobs:
         github.event.issue.pull_request != null
       )
     steps:
+      - name: Install actions-ci
+        run: npm install -g @sidj-thr/actions-ci@0.5.0
+
       - name: Check PR approvals
         continue-on-error: true
         env:
@@ -37,7 +40,7 @@ jobs:
           GITHUB_APP_ID: ${{ secrets.APP_ID }}
           GITHUB_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
         run: |
-          npx @sidj-thr/actions-ci@0.3.2 pending-approvals \
+          actions-ci pending-approvals \
             --pr-number "${{ github.event.pull_request.number || github.event.issue.number }}" \
             --maintainers-team 'qvac-mgmt' \
             --team-leads-team 'qvac-internal-merge' \
