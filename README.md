@@ -56,3 +56,4 @@ run: npx @sidj-thr/actions-ci@0.1.0 pending-approvals ...
 TC1 test commit
 retrigger Wed Jul  1 17:19:17 IST 2026
 retrigger release** Wed Jul  1 17:35:36 IST 2026
+retrigger release** v2 Wed Jul  1 17:40:56 IST 2026
