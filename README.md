@@ -53,3 +53,4 @@ To pin to a specific version instead of `latest`, change the workflow step to:
 ```yaml
 run: npx @sidj-thr/actions-ci@0.1.0 pending-approvals ...
 ```
+TC2 test commit
